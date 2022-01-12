@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Marketplace</title>
+</head>
+<body>
+<div id="menu" th:fragment="menu">
+    <a href="/main">Main</a>
+    <a href="/marketplace">Marketplace</a>
+    <a th:if="${logged == true}" href="/myOffers">My Offers</a>
+    <a th:if="${logged == true}" href="/myOrders">Order History</a>
+    <a th:if="${logged == false}" href="/login">Login</a>
+    <a th:if="${logged == true}" href="/logout">Logout</a>
+</div>
+
+<div id="logo" th:fragment="logo"><img id="logoImg" src="logo.jpg"></div>
+</body>
+</html>

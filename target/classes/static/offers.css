@@ -1,0 +1,73 @@
+.noOffersCreated
+{
+    margin-top: 60px;
+    padding-top: 130px;
+    text-align: center;
+    width: 50%;
+    height: 300px;
+    color: Black;
+    letter-spacing: 3px;
+    font-size: 40px;
+    background-color: lightcoral;
+    border-radius: 50%;
+}
+
+.offersManagement{
+    display: flex;
+    justify-content: center;
+    background-color: lightcyan;
+    border: 2px solid darkcyan;
+}
+.offersManagement a {
+    text-align: center;
+    width: 150px;
+    text-decoration: none;
+    color: black;
+    transition: color 0.5s;
+    transition: background 0.5s;
+    padding: 8px 50px;
+    font-size: 20px;
+}
+.offersManagement a:hover {
+    color: white;
+    background: darkcyan;
+}
+
+.offer {
+    border: 2px solid darkcyan;
+    background-color: lightcyan;
+    border-radius: 10px;
+    margin: 10px;
+    width: 700px;
+    padding: 10px;
+}
+
+.offer .title {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.offer .description {
+    font-size: 18px;
+}
+
+.offer .price {
+    font-size: 15px;
+    display: inline-block;
+}
+
+.offer .userId {
+    font-size: 15px;
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.offer .quantity {
+    font-size: 15px;
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.offer div {
+    margin: 10px;
+}

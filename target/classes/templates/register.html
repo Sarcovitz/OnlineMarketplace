@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Marketplace</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="register.css">
+    <script src="/javascript.js"></script>
+</head>
+<body>
+
+<div th:replace="fragments.html :: logo"></div>
+<div th:replace="fragments.html :: menu"></div>
+
+<div id="content">
+    <form method="post" id="register-form" onsubmit="return validateRegistration()">
+        <input type="text" placeholder="E-mail" th:field="*{registerUser.email}" id="email">
+        <br>
+        <input type="text" placeholder="Login" th:field="*{registerUser.login}" id="login">
+        <br>
+        <input type="password" placeholder="Password" th:field="*{registerUser.password}" id="password">
+        <br>
+        <input type="password" placeholder="Repeat password." th:field="*{registerUser.password2}" id="password2">
+        <br>
+        <input type="submit" value="register">
+    </form>
+</div>
+</body>
+</html>

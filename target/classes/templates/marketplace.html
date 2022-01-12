@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Marketplace</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="offers.css">
+</head>
+<body>
+<div th:replace="fragments.html :: menu"></div>
+<div th:replace="fragments.html :: logo"></div>
+
+<div id="content">
+    <div th:if="${offers.size() !=0}" th:each="offer : ${offers}" class="offer">
+        <div th:text="${offer.title}" class="title"></div>
+        <div th:text="${offer.description}" class="description"></div>
+        <div th:text="'Price: ' + ${offer.price}" class="price"></div>
+        <div class="userId" th:if="${userId == offer.userId}"> My Offer</div>
+        <div class="userId" th:if="${userId != offer.userId}" th:text="'Seller ID: ' + ${offer.userId}"></div>
+        <div th:text="'Left: ' + ${offer.quantity}" class="quantity"></div>
+        <a type="submit" th:if="${logged == true}" th:href="@{/order/{id}(id=${offer.id})}">ORDER</a>
+    </div>
+    <div th:if="${offers.size() == 0}" class="noOffersCreated">
+        <p> There aren't any created offer! :( </p>
+    </div>
+</div>
+</body>
+</html>

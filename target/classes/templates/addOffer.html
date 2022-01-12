@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Marketplace</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="common.css">
+    <script src="/javascript.js"></script>
+</head>
+<body>
+<div th:replace="fragments.html :: menu"></div>
+<div th:replace="fragments.html :: logo"></div>
+
+<div id="content">
+    <form action="/offer/add" method="post" class="form" onsubmit="return validateNewOffer()">
+        <input type="text" placeholder="Title" name="title" id="title" class="input">
+        <br>
+        <input type="text" placeholder="Price" name="price" id="price" class="input">
+        <br>
+        <input type="text" placeholder="Quantity" name="quantity" id="quantity" class="input">
+        <br>
+        <input type="text" placeholder="Description" name="description" id="description" class="input">
+        <br>
+        <input type="submit" value="Create Offer" class="input-button">
+    </form>
+</div>
+</body>
+</html>

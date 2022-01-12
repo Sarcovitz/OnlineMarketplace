@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Marketplace</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="offers.css">
+</head>
+<body>
+<div th:replace="fragments.html :: menu"></div>
+<div th:replace="fragments.html :: logo"></div>
+
+<div id="content">
+    <div th:if="${ not orders.isEmpty()}" th:each="order : ${orders}" class="offer">
+        <div th:text="${order.title}" class="title"></div>
+        <div th:text="'Price: ' + ${order.price}" class="price"></div>
+        <div th:text="'Quantity: 1'" class="price"></div>
+        <div th:text="'Seller:' + ${order.sellerId}" class="userId"></div>
+
+    </div>
+    <div th:if="${orders == null || orders.isEmpty()}" class="noOffersCreated">
+        <p> There aren't any orders yet! :( </p>
+    </div>
+</div>
+</body>
+</html>
