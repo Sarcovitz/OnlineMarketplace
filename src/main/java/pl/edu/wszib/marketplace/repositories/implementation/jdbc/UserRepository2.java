@@ -1,4 +1,4 @@
-package pl.edu.wszib.marketplace.repositories.implementation;
+package pl.edu.wszib.marketplace.repositories.implementation.jdbc;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -8,8 +8,8 @@ import pl.edu.wszib.marketplace.repositories.IUserRepository;
 import java.sql.*;
 import java.util.Optional;
 
-@Repository
-public class UserRepository implements IUserRepository
+
+public class UserRepository2 implements IUserRepository
 {
     @Autowired
     Connection connection;

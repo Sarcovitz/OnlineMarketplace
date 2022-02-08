@@ -1,5 +1,6 @@
 package pl.edu.wszib.marketplace.config;
 
+import org.hibernate.SessionFactory;
 import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -53,6 +54,11 @@ public class AppConfiguration implements WebMvcConfigurer
                     .password("")
                     .build();
         }
+    }
+
+    @Bean
+    public SessionFactory sessionFactory() {
+        return new org.hibernate.cfg.Configuration().configure().buildSessionFactory();
     }
 
 }

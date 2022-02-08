@@ -1,4 +1,4 @@
-package pl.edu.wszib.marketplace.repositories.implementation;
+package pl.edu.wszib.marketplace.repositories.implementation.jdbc;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -10,8 +10,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-@Repository
-public class OfferRepository implements IOfferRepository
+
+public class OfferRepository2 implements IOfferRepository
 {
     @Autowired
     Connection connection;
